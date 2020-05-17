@@ -1,18 +1,21 @@
 #include <bits/stdc++.h>
 
+#define ll          long long
+
 using namespace std;
 
 int cases=1;
 void solve(){
 	cout<<"Case #"<<cases++<<": ";
 	
-    int N, D, arr[1000];
+    int N;
+    ll D, arr[1000];
     cin >> N >> D;
     int index = 0;
     while (index<N) cin >> arr[index++];
-    int latestDay = D;
+    ll latestDay = D;
     while (index--){
-        int tmp = latestDay%arr[index];
+        ll tmp = latestDay%arr[index];
 		if (tmp == 0) continue;
 		latestDay -= tmp;
     }
